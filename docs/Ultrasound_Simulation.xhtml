@@ -175,6 +175,8 @@ var _stringProperties = {};
   var Choosevis2; // EjsS Model.Variables.animation.Choosevis2
   var AutoX; // EjsS Model.Variables.animation.AutoX
   var Xmaxgraph; // EjsS Model.Variables.animation.Xmaxgraph
+  var PlotPanelWid; // EjsS Model.Variables.animation.PlotPanelWid
+  var PlotPanelHei; // EjsS Model.Variables.animation.PlotPanelHei
 
   _model.getOdes = function() { return []; };
 
@@ -289,7 +291,9 @@ var _stringProperties = {};
       Choosevis : Choosevis,
       Choosevis2 : Choosevis2,
       AutoX : AutoX,
-      Xmaxgraph : Xmaxgraph
+      Xmaxgraph : Xmaxgraph,
+      PlotPanelWid : PlotPanelWid,
+      PlotPanelHei : PlotPanelHei
     };
   };
 
@@ -401,7 +405,9 @@ var _stringProperties = {};
       Choosevis : Choosevis,
       Choosevis2 : Choosevis2,
       AutoX : AutoX,
-      Xmaxgraph : Xmaxgraph
+      Xmaxgraph : Xmaxgraph,
+      PlotPanelWid : PlotPanelWid,
+      PlotPanelHei : PlotPanelHei
     };
   };
 
@@ -511,6 +517,8 @@ var _stringProperties = {};
     if(typeof json.Choosevis2 != "undefined") Choosevis2 = json.Choosevis2;
     if(typeof json.AutoX != "undefined") AutoX = json.AutoX;
     if(typeof json.Xmaxgraph != "undefined") Xmaxgraph = json.Xmaxgraph;
+    if(typeof json.PlotPanelWid != "undefined") PlotPanelWid = json.PlotPanelWid;
+    if(typeof json.PlotPanelHei != "undefined") PlotPanelHei = json.PlotPanelHei;
   };
 
   _model._readParametersPublic = function(json) {
@@ -619,6 +627,8 @@ var _stringProperties = {};
     if(typeof json.Choosevis2 != "undefined") Choosevis2 = json.Choosevis2;
     if(typeof json.AutoX != "undefined") AutoX = json.AutoX;
     if(typeof json.Xmaxgraph != "undefined") Xmaxgraph = json.Xmaxgraph;
+    if(typeof json.PlotPanelWid != "undefined") PlotPanelWid = json.PlotPanelWid;
+    if(typeof json.PlotPanelHei != "undefined") PlotPanelHei = json.PlotPanelHei;
   };
 
   function _unserializePublic(json) { return _model.unserializePublic(json); }
@@ -648,7 +658,7 @@ var _stringProperties = {};
   });
 
   _model.addToReset(function() {
-    options = ["Attenuation","Geometry of Refraction","Intensity"]; // EjsS Model.Variables.Var Table.options
+    options = ["Attenuation","Geometry of Reflection and Transmission","Intensity"]; // EjsS Model.Variables.Var Table.options
     opt_angle = new Array(1); // EjsS Model.Variables.Var Table.opt_angle
     (function () {
       var _i0;
@@ -810,6 +820,8 @@ var _stringProperties = {};
     Choosevis2 = true; // EjsS Model.Variables.animation.Choosevis2
     AutoX = true; // EjsS Model.Variables.animation.AutoX
     Xmaxgraph = 10; // EjsS Model.Variables.animation.Xmaxgraph
+    PlotPanelWid = 500; // EjsS Model.Variables.animation.PlotPanelWid
+    PlotPanelHei = 400; // EjsS Model.Variables.animation.PlotPanelHei
   });
 
   if (_inputParameters) {
@@ -858,206 +870,212 @@ var _stringProperties = {};
       AutoX=false;  // > CustomCode.Lib Page:32
       Xmaxgraph=10;  // > CustomCode.Lib Page:33
       info="./ultrasoundfiles/int.png"  // > CustomCode.Lib Page:34
-        // > CustomCode.Lib Page:35
-     // > CustomCode.Lib Page:36
+      PlotPanelWid=500;  // > CustomCode.Lib Page:35
+      PlotPanelHei=400;  // > CustomCode.Lib Page:36
         // > CustomCode.Lib Page:37
-   } else if (opt_angle[0]===options[1]) {  // > CustomCode.Lib Page:38
-      x1=20;  // > CustomCode.Lib Page:39
-      x2=14;  // > CustomCode.Lib Page:40
-      rot=7.05;  // > CustomCode.Lib Page:41
-      y2=86;  // > CustomCode.Lib Page:42
-      y1=80;  // > CustomCode.Lib Page:43
-      arrowvisible=true;  // > CustomCode.Lib Page:44
-      Iarrowvisible=false;  // > CustomCode.Lib Page:45
-      tissuevisible=true;  // > CustomCode.Lib Page:46
-      tissuevisible2=false;  // > CustomCode.Lib Page:47
-      transdurcervisible=false;  // > CustomCode.Lib Page:48
-      shapex=8;  // > CustomCode.Lib Page:49
-      shapey=16;  // > CustomCode.Lib Page:50
-      heightpanel="500";  // > CustomCode.Lib Page:51
-      bluevis=true;  // > CustomCode.Lib Page:52
-      criticalvis=false;  // > CustomCode.Lib Page:53
-      ampWidth="0";  // > CustomCode.Lib Page:54
-      ampHeight="0";  // > CustomCode.Lib Page:55
-      intsep=false;  // > CustomCode.Lib Page:56
-      intsep2=false;  // > CustomCode.Lib Page:57
-      intsep3=false;  // > CustomCode.Lib Page:58
-      intsep4=false;  // > CustomCode.Lib Page:59
-      Ygraph=100;  // > CustomCode.Lib Page:60
-      Ymingraph=0;  // > CustomCode.Lib Page:61
-      animationtime=0;  // > CustomCode.Lib Page:62
-      _pause();  // > CustomCode.Lib Page:63
-      animationIt=0;  // > CustomCode.Lib Page:64
-      animationt=0;  // > CustomCode.Lib Page:65
-      GraphNameX="-"  // > CustomCode.Lib Page:66
-      AutoX=false;  // > CustomCode.Lib Page:67
-      GraphNameUP="-";  // > CustomCode.Lib Page:68
-      Xmaxgraph=10;  // > CustomCode.Lib Page:69
-      GraphNameY="Ultrasound Intensity in mW/cm2"  // > CustomCode.Lib Page:70
-      info="./ultrasoundfiles/geo.png"  // > CustomCode.Lib Page:71
-        // > CustomCode.Lib Page:72
-  } else if (opt_angle[0]===options[0]) {  // > CustomCode.Lib Page:73
-      x1=62;  // > CustomCode.Lib Page:74
-      x2=43;  // > CustomCode.Lib Page:75
-      rot=7.85;  // > CustomCode.Lib Page:76
-      y2=0;  // > CustomCode.Lib Page:77
-      y1=0;  // > CustomCode.Lib Page:78
-      arrowvisible=false;  // > CustomCode.Lib Page:79
-      Iarrowvisible=false;  // > CustomCode.Lib Page:80
-      tissuevisible=false;  // > CustomCode.Lib Page:81
-      tissuevisible2=true;  // > CustomCode.Lib Page:82
-      transdurcervisible=true;  // > CustomCode.Lib Page:83
-      shapex=8*2;  // > CustomCode.Lib Page:84
-      shapey=16*2;  // > CustomCode.Lib Page:85
-      CM=0;  // > CustomCode.Lib Page:86
-      heightpanel="400";  // > CustomCode.Lib Page:87
-      AutoScale=true;  // > CustomCode.Lib Page:88
-      GraphNameX="Penetration depth in cm";  // > CustomCode.Lib Page:89
-      GraphNameUP="Intensity/Depth";  // > CustomCode.Lib Page:90
-      bluevis=false;  // > CustomCode.Lib Page:91
-      criticalvis=false;  // > CustomCode.Lib Page:92
-      lib_Page_2();  // > CustomCode.Lib Page:93
-      ampWidth="0";  // > CustomCode.Lib Page:94
-      ampHeight="0";  // > CustomCode.Lib Page:95
-      intsep=false;  // > CustomCode.Lib Page:96
-      intsep2=false;  // > CustomCode.Lib Page:97
-      intsep3=false;  // > CustomCode.Lib Page:98
-      intsep4=false;  // > CustomCode.Lib Page:99
-      Ygraph=100;  // > CustomCode.Lib Page:100
-      Ymingraph=0;  // > CustomCode.Lib Page:101
-      animationtime=220;  // > CustomCode.Lib Page:102
-      _pause();  // > CustomCode.Lib Page:103
-      animationIt=0;  // > CustomCode.Lib Page:104
-      animationt=0;  // > CustomCode.Lib Page:105
-      service_tissue1();  // > CustomCode.Lib Page:106
-      AutoX=true;  // > CustomCode.Lib Page:107
-      Xmaxgraph=xmax;  // > CustomCode.Lib Page:108
-      GraphNameY="Ultrasound Intensity in mW/cm2"  // > CustomCode.Lib Page:109
-      info="./ultrasoundfiles/at.png"  // > CustomCode.Lib Page:110
-       // > CustomCode.Lib Page:111
-        // > CustomCode.Lib Page:112
-        // > CustomCode.Lib Page:113
-   }else {  // > CustomCode.Lib Page:114
-   }  // > CustomCode.Lib Page:115
-     return;  // > CustomCode.Lib Page:116
-  }  // > CustomCode.Lib Page:117
-  function service_tissue1(){  // > CustomCode.Lib Page:118
-    if (opt_tissue1[0]===optionstissue1[0]) {  // > CustomCode.Lib Page:119
-        // > CustomCode.Lib Page:120
-      coef=0.0002  // > CustomCode.Lib Page:121
-      coef1=0.0000  // > CustomCode.Lib Page:122
-      coef2=0.0012  // > CustomCode.Lib Page:123
-       //water  // > CustomCode.Lib Page:124
-       lib_Page_2();  // > CustomCode.Lib Page:125
-         // > CustomCode.Lib Page:126
-       ImageUrl = "./ultrasoundfiles/water.png"  // > CustomCode.Lib Page:127
-       Choosevis=false;  // > CustomCode.Lib Page:128
-        // > CustomCode.Lib Page:129
-  } else if (opt_tissue1[0]===optionstissue1[1]) {  // > CustomCode.Lib Page:130
-        // > CustomCode.Lib Page:131
-      coef=0.2  // > CustomCode.Lib Page:132
-      coef1=0.2  // > CustomCode.Lib Page:133
-      coef2=0.2  // > CustomCode.Lib Page:134
-      //blood  // > CustomCode.Lib Page:135
-      lib_Page_2();  // > CustomCode.Lib Page:136
+     // > CustomCode.Lib Page:38
+        // > CustomCode.Lib Page:39
+   } else if (opt_angle[0]===options[1]) {  // > CustomCode.Lib Page:40
+      x1=20;  // > CustomCode.Lib Page:41
+      x2=14;  // > CustomCode.Lib Page:42
+      rot=7.05;  // > CustomCode.Lib Page:43
+      y2=86;  // > CustomCode.Lib Page:44
+      y1=80;  // > CustomCode.Lib Page:45
+      arrowvisible=true;  // > CustomCode.Lib Page:46
+      Iarrowvisible=false;  // > CustomCode.Lib Page:47
+      tissuevisible=true;  // > CustomCode.Lib Page:48
+      tissuevisible2=false;  // > CustomCode.Lib Page:49
+      transdurcervisible=false;  // > CustomCode.Lib Page:50
+      shapex=8;  // > CustomCode.Lib Page:51
+      shapey=16;  // > CustomCode.Lib Page:52
+      heightpanel="500";  // > CustomCode.Lib Page:53
+      bluevis=true;  // > CustomCode.Lib Page:54
+      criticalvis=false;  // > CustomCode.Lib Page:55
+      ampWidth="0";  // > CustomCode.Lib Page:56
+      ampHeight="0";  // > CustomCode.Lib Page:57
+      intsep=false;  // > CustomCode.Lib Page:58
+      intsep2=false;  // > CustomCode.Lib Page:59
+      intsep3=false;  // > CustomCode.Lib Page:60
+      intsep4=false;  // > CustomCode.Lib Page:61
+      Ygraph=100;  // > CustomCode.Lib Page:62
+      Ymingraph=0;  // > CustomCode.Lib Page:63
+      animationtime=0;  // > CustomCode.Lib Page:64
+      _pause();  // > CustomCode.Lib Page:65
+      animationIt=0;  // > CustomCode.Lib Page:66
+      animationt=0;  // > CustomCode.Lib Page:67
+      GraphNameX="-"  // > CustomCode.Lib Page:68
+      AutoX=false;  // > CustomCode.Lib Page:69
+      GraphNameUP="-";  // > CustomCode.Lib Page:70
+      Xmaxgraph=10;  // > CustomCode.Lib Page:71
+      GraphNameY="Ultrasound Intensity in mW/cm2"  // > CustomCode.Lib Page:72
+      info="./ultrasoundfiles/geo.png"  // > CustomCode.Lib Page:73
+      PlotPanelWid=0;  // > CustomCode.Lib Page:74
+      PlotPanelHei=0;  // > CustomCode.Lib Page:75
+        // > CustomCode.Lib Page:76
+  } else if (opt_angle[0]===options[0]) {  // > CustomCode.Lib Page:77
+      x1=62;  // > CustomCode.Lib Page:78
+      x2=43;  // > CustomCode.Lib Page:79
+      rot=7.85;  // > CustomCode.Lib Page:80
+      y2=0;  // > CustomCode.Lib Page:81
+      y1=0;  // > CustomCode.Lib Page:82
+      arrowvisible=false;  // > CustomCode.Lib Page:83
+      Iarrowvisible=false;  // > CustomCode.Lib Page:84
+      tissuevisible=false;  // > CustomCode.Lib Page:85
+      tissuevisible2=true;  // > CustomCode.Lib Page:86
+      transdurcervisible=true;  // > CustomCode.Lib Page:87
+      shapex=8*2;  // > CustomCode.Lib Page:88
+      shapey=16*2;  // > CustomCode.Lib Page:89
+      CM=0;  // > CustomCode.Lib Page:90
+      heightpanel="400";  // > CustomCode.Lib Page:91
+      AutoScale=true;  // > CustomCode.Lib Page:92
+      GraphNameX="Penetration depth in cm";  // > CustomCode.Lib Page:93
+      GraphNameUP="Intensity/Depth";  // > CustomCode.Lib Page:94
+      bluevis=false;  // > CustomCode.Lib Page:95
+      criticalvis=false;  // > CustomCode.Lib Page:96
+      lib_Page_2();  // > CustomCode.Lib Page:97
+      ampWidth="0";  // > CustomCode.Lib Page:98
+      ampHeight="0";  // > CustomCode.Lib Page:99
+      intsep=false;  // > CustomCode.Lib Page:100
+      intsep2=false;  // > CustomCode.Lib Page:101
+      intsep3=false;  // > CustomCode.Lib Page:102
+      intsep4=false;  // > CustomCode.Lib Page:103
+      Ygraph=100;  // > CustomCode.Lib Page:104
+      Ymingraph=0;  // > CustomCode.Lib Page:105
+      animationtime=220;  // > CustomCode.Lib Page:106
+      _pause();  // > CustomCode.Lib Page:107
+      animationIt=0;  // > CustomCode.Lib Page:108
+      animationt=0;  // > CustomCode.Lib Page:109
+      service_tissue1();  // > CustomCode.Lib Page:110
+      AutoX=true;  // > CustomCode.Lib Page:111
+      Xmaxgraph=xmax;  // > CustomCode.Lib Page:112
+      GraphNameY="Ultrasound Intensity in mW/cm2"  // > CustomCode.Lib Page:113
+      info="./ultrasoundfiles/at.png"  // > CustomCode.Lib Page:114
+      PlotPanelWid=500;  // > CustomCode.Lib Page:115
+      PlotPanelHei=400;  // > CustomCode.Lib Page:116
+       // > CustomCode.Lib Page:117
+        // > CustomCode.Lib Page:118
+        // > CustomCode.Lib Page:119
+   }else {  // > CustomCode.Lib Page:120
+   }  // > CustomCode.Lib Page:121
+     return;  // > CustomCode.Lib Page:122
+  }  // > CustomCode.Lib Page:123
+  function service_tissue1(){  // > CustomCode.Lib Page:124
+    if (opt_tissue1[0]===optionstissue1[0]) {  // > CustomCode.Lib Page:125
+        // > CustomCode.Lib Page:126
+      coef=0.0002  // > CustomCode.Lib Page:127
+      coef1=0.0000  // > CustomCode.Lib Page:128
+      coef2=0.0012  // > CustomCode.Lib Page:129
+       //water  // > CustomCode.Lib Page:130
+       lib_Page_2();  // > CustomCode.Lib Page:131
+         // > CustomCode.Lib Page:132
+       ImageUrl = "./ultrasoundfiles/water.png"  // > CustomCode.Lib Page:133
+       Choosevis=false;  // > CustomCode.Lib Page:134
+        // > CustomCode.Lib Page:135
+  } else if (opt_tissue1[0]===optionstissue1[1]) {  // > CustomCode.Lib Page:136
         // > CustomCode.Lib Page:137
-      ImageUrl = "./ultrasoundfiles/blood.png"  // > CustomCode.Lib Page:138
-      Choosevis=false;  // > CustomCode.Lib Page:139
-        // > CustomCode.Lib Page:140
-        // > CustomCode.Lib Page:141
-  } else if (opt_tissue1[0]===optionstissue1[2]) {  // > CustomCode.Lib Page:142
+      coef=0.2  // > CustomCode.Lib Page:138
+      coef1=0.2  // > CustomCode.Lib Page:139
+      coef2=0.2  // > CustomCode.Lib Page:140
+      //blood  // > CustomCode.Lib Page:141
+      lib_Page_2();  // > CustomCode.Lib Page:142
         // > CustomCode.Lib Page:143
-      coef=0.5  // > CustomCode.Lib Page:144
-      coef1=0.3  // > CustomCode.Lib Page:145
-      coef2=0.8  // > CustomCode.Lib Page:146
-      //soft tissue  // > CustomCode.Lib Page:147
-      lib_Page_2();  // > CustomCode.Lib Page:148
+      ImageUrl = "./ultrasoundfiles/blood.png"  // > CustomCode.Lib Page:144
+      Choosevis=false;  // > CustomCode.Lib Page:145
+        // > CustomCode.Lib Page:146
+        // > CustomCode.Lib Page:147
+  } else if (opt_tissue1[0]===optionstissue1[2]) {  // > CustomCode.Lib Page:148
         // > CustomCode.Lib Page:149
-      ImageUrl = "./ultrasoundfiles/soft.png"  // > CustomCode.Lib Page:150
-      Choosevis=false;  // > CustomCode.Lib Page:151
-        // > CustomCode.Lib Page:152
-   }else if (opt_tissue1[0]===optionstissue1[3]) {  // > CustomCode.Lib Page:153
-        // > CustomCode.Lib Page:154
-      coef=0.4  // > CustomCode.Lib Page:155
-      coef1=0.3  // > CustomCode.Lib Page:156
-      coef2=0.5  // > CustomCode.Lib Page:157
-      //brain  // > CustomCode.Lib Page:158
-      lib_Page_2();  // > CustomCode.Lib Page:159
+      coef=0.5  // > CustomCode.Lib Page:150
+      coef1=0.3  // > CustomCode.Lib Page:151
+      coef2=0.8  // > CustomCode.Lib Page:152
+      //soft tissue  // > CustomCode.Lib Page:153
+      lib_Page_2();  // > CustomCode.Lib Page:154
+        // > CustomCode.Lib Page:155
+      ImageUrl = "./ultrasoundfiles/soft.png"  // > CustomCode.Lib Page:156
+      Choosevis=false;  // > CustomCode.Lib Page:157
+        // > CustomCode.Lib Page:158
+   }else if (opt_tissue1[0]===optionstissue1[3]) {  // > CustomCode.Lib Page:159
         // > CustomCode.Lib Page:160
-      ImageUrl = "./ultrasoundfiles/brain.png"  // > CustomCode.Lib Page:161
-      Choosevis=false;  // > CustomCode.Lib Page:162
-   }else if (opt_tissue1[0]===optionstissue1[4]) {  // > CustomCode.Lib Page:163
-        // > CustomCode.Lib Page:164
-      coef=0.6  // > CustomCode.Lib Page:165
-      coef1=0.4  // > CustomCode.Lib Page:166
-      coef2=0.7  // > CustomCode.Lib Page:167
-      //liver  // > CustomCode.Lib Page:168
-      lib_Page_2();  // > CustomCode.Lib Page:169
+      coef=0.4  // > CustomCode.Lib Page:161
+      coef1=0.3  // > CustomCode.Lib Page:162
+      coef2=0.5  // > CustomCode.Lib Page:163
+      //brain  // > CustomCode.Lib Page:164
+      lib_Page_2();  // > CustomCode.Lib Page:165
+        // > CustomCode.Lib Page:166
+      ImageUrl = "./ultrasoundfiles/brain.png"  // > CustomCode.Lib Page:167
+      Choosevis=false;  // > CustomCode.Lib Page:168
+   }else if (opt_tissue1[0]===optionstissue1[4]) {  // > CustomCode.Lib Page:169
         // > CustomCode.Lib Page:170
-      ImageUrl = "./ultrasoundfiles/liver.png"  // > CustomCode.Lib Page:171
-      Choosevis=false;  // > CustomCode.Lib Page:172
-        // > CustomCode.Lib Page:173
-   }else if (opt_tissue1[0]===optionstissue1[5]) {  // > CustomCode.Lib Page:174
-        // > CustomCode.Lib Page:175
-      coef=0.9  // > CustomCode.Lib Page:176
-      coef1=0.5  // > CustomCode.Lib Page:177
-      coef2=1.8  // > CustomCode.Lib Page:178
-      //fat  // > CustomCode.Lib Page:179
-      lib_Page_2();  // > CustomCode.Lib Page:180
+      coef=0.6  // > CustomCode.Lib Page:171
+      coef1=0.4  // > CustomCode.Lib Page:172
+      coef2=0.7  // > CustomCode.Lib Page:173
+      //liver  // > CustomCode.Lib Page:174
+      lib_Page_2();  // > CustomCode.Lib Page:175
+        // > CustomCode.Lib Page:176
+      ImageUrl = "./ultrasoundfiles/liver.png"  // > CustomCode.Lib Page:177
+      Choosevis=false;  // > CustomCode.Lib Page:178
+        // > CustomCode.Lib Page:179
+   }else if (opt_tissue1[0]===optionstissue1[5]) {  // > CustomCode.Lib Page:180
         // > CustomCode.Lib Page:181
-      ImageUrl = "./ultrasoundfiles/fat.jpg"  // > CustomCode.Lib Page:182
-      Choosevis=false;  // > CustomCode.Lib Page:183
-        // > CustomCode.Lib Page:184
-   }else if (opt_tissue1[0]===optionstissue1[6]) {  // > CustomCode.Lib Page:185
-        // > CustomCode.Lib Page:186
-      coef=0.3  // > CustomCode.Lib Page:187
-      coef1=0.2  // > CustomCode.Lib Page:188
-      coef2=0.6  // > CustomCode.Lib Page:189
-      //smoothmuscle  // > CustomCode.Lib Page:190
-      lib_Page_2();  // > CustomCode.Lib Page:191
+      coef=0.9  // > CustomCode.Lib Page:182
+      coef1=0.5  // > CustomCode.Lib Page:183
+      coef2=1.8  // > CustomCode.Lib Page:184
+      //fat  // > CustomCode.Lib Page:185
+      lib_Page_2();  // > CustomCode.Lib Page:186
+        // > CustomCode.Lib Page:187
+      ImageUrl = "./ultrasoundfiles/fat.jpg"  // > CustomCode.Lib Page:188
+      Choosevis=false;  // > CustomCode.Lib Page:189
+        // > CustomCode.Lib Page:190
+   }else if (opt_tissue1[0]===optionstissue1[6]) {  // > CustomCode.Lib Page:191
         // > CustomCode.Lib Page:192
-      ImageUrl= "./ultrasoundfiles/muscle.jpg"  // > CustomCode.Lib Page:193
-      Choosevis=false;  // > CustomCode.Lib Page:194
-        // > CustomCode.Lib Page:195
-   }else if (opt_tissue1[0]===optionstissue1[7]) {  // > CustomCode.Lib Page:196
-        // > CustomCode.Lib Page:197
-      coef=1.0  // > CustomCode.Lib Page:198
-      coef1=0.9  // > CustomCode.Lib Page:199
-      coef2=1.1  // > CustomCode.Lib Page:200
-      //tendon  // > CustomCode.Lib Page:201
-      lib_Page_2();  // > CustomCode.Lib Page:202
+      coef=0.3  // > CustomCode.Lib Page:193
+      coef1=0.2  // > CustomCode.Lib Page:194
+      coef2=0.6  // > CustomCode.Lib Page:195
+      //smoothmuscle  // > CustomCode.Lib Page:196
+      lib_Page_2();  // > CustomCode.Lib Page:197
+        // > CustomCode.Lib Page:198
+      ImageUrl= "./ultrasoundfiles/muscle.jpg"  // > CustomCode.Lib Page:199
+      Choosevis=false;  // > CustomCode.Lib Page:200
+        // > CustomCode.Lib Page:201
+   }else if (opt_tissue1[0]===optionstissue1[7]) {  // > CustomCode.Lib Page:202
         // > CustomCode.Lib Page:203
-      ImageUrl = "./ultrasoundfiles/tendon.png"  // > CustomCode.Lib Page:204
-      Choosevis=false;  // > CustomCode.Lib Page:205
-        // > CustomCode.Lib Page:206
-      // > CustomCode.Lib Page:207
-   }else if (opt_tissue1[0]===optionstissue1[8]) {  // > CustomCode.Lib Page:208
+      coef=1.0  // > CustomCode.Lib Page:204
+      coef1=0.9  // > CustomCode.Lib Page:205
+      coef2=1.1  // > CustomCode.Lib Page:206
+      //tendon  // > CustomCode.Lib Page:207
+      lib_Page_2();  // > CustomCode.Lib Page:208
         // > CustomCode.Lib Page:209
-      coef=15.0  // > CustomCode.Lib Page:210
-      coef1=13.0  // > CustomCode.Lib Page:211
-      coef2=26.0  // > CustomCode.Lib Page:212
-      //bone  // > CustomCode.Lib Page:213
-      lib_Page_2();  // > CustomCode.Lib Page:214
+      ImageUrl = "./ultrasoundfiles/tendon.png"  // > CustomCode.Lib Page:210
+      Choosevis=false;  // > CustomCode.Lib Page:211
+        // > CustomCode.Lib Page:212
+      // > CustomCode.Lib Page:213
+   }else if (opt_tissue1[0]===optionstissue1[8]) {  // > CustomCode.Lib Page:214
         // > CustomCode.Lib Page:215
-      ImageUrl = "./ultrasoundfiles/bone.png"  // > CustomCode.Lib Page:216
-        // > CustomCode.Lib Page:217
-      Choosevis=false;  // > CustomCode.Lib Page:218
-        // > CustomCode.Lib Page:219
-    }else if (opt_tissue1[0]===optionstissue1[9]) {  // > CustomCode.Lib Page:220
+      coef=15.0  // > CustomCode.Lib Page:216
+      coef1=13.0  // > CustomCode.Lib Page:217
+      coef2=26.0  // > CustomCode.Lib Page:218
+      //bone  // > CustomCode.Lib Page:219
+      lib_Page_2();  // > CustomCode.Lib Page:220
         // > CustomCode.Lib Page:221
-      coef=0  // > CustomCode.Lib Page:222
-      coef1=0  // > CustomCode.Lib Page:223
-      coef2=0  // > CustomCode.Lib Page:224
-      lib_Page_2();  // > CustomCode.Lib Page:225
-        // > CustomCode.Lib Page:226
-      ImageUrl = " "  // > CustomCode.Lib Page:227
-        // > CustomCode.Lib Page:228
-      Choosevis=true;  // > CustomCode.Lib Page:229
-   }else {  // > CustomCode.Lib Page:230
-     return;  // > CustomCode.Lib Page:231
-   }  // > CustomCode.Lib Page:232
-     return;  // > CustomCode.Lib Page:233
-  }  // > CustomCode.Lib Page:234
+      ImageUrl = "./ultrasoundfiles/bone.png"  // > CustomCode.Lib Page:222
+        // > CustomCode.Lib Page:223
+      Choosevis=false;  // > CustomCode.Lib Page:224
+        // > CustomCode.Lib Page:225
+    }else if (opt_tissue1[0]===optionstissue1[9]) {  // > CustomCode.Lib Page:226
+        // > CustomCode.Lib Page:227
+      coef=0  // > CustomCode.Lib Page:228
+      coef1=0  // > CustomCode.Lib Page:229
+      coef2=0  // > CustomCode.Lib Page:230
+      lib_Page_2();  // > CustomCode.Lib Page:231
+        // > CustomCode.Lib Page:232
+      ImageUrl = " "  // > CustomCode.Lib Page:233
+        // > CustomCode.Lib Page:234
+      Choosevis=true;  // > CustomCode.Lib Page:235
+   }else {  // > CustomCode.Lib Page:236
+     return;  // > CustomCode.Lib Page:237
+   }  // > CustomCode.Lib Page:238
+     return;  // > CustomCode.Lib Page:239
+  }  // > CustomCode.Lib Page:240
 
   function intensity () {  // > CustomCode.Intensity:1
   Ii = Math.pow(10,-1/10*CMtissue1*coefI1*1) * I0;  // > CustomCode.Intensity:2
@@ -1288,7 +1306,7 @@ var _stringProperties = {};
   }  // > CustomCode.InitPage:44
 
   function lib_Page_2 () {  // > CustomCode.Lib Page 2:1
-    functionString="pow(10,"+ coef+"*-2*x/10*"+ mhz+")*"+I0;  // > CustomCode.Lib Page 2:2
+    functionString="pow(10,"+ coef+"*-1*x/10*"+ mhz+")*"+I0;  // > CustomCode.Lib Page 2:2
     _view._initialize();  // > CustomCode.Lib Page 2:3
     ınitPage();  // > CustomCode.Lib Page 2:4
     Xmaxgraph=xmax;  // > CustomCode.Lib Page 2:5
@@ -1643,7 +1661,9 @@ var _stringProperties = {};
           _view.AnimationIntensity12.linkProperty("Visibility",  function() { return intsep; }, function(_v) { intsep = _v; } ); // HtmlView Page linking property 'Visibility' for element 'AnimationIntensity12'
           _view.Transducer.linkProperty("X",  function() { return 0-CM; } ); // HtmlView Page linking property 'X' for element 'Transducer'
           _view.Transducer.linkProperty("Visibility",  function() { return transdurcervisible; }, function(_v) { transdurcervisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'Transducer'
+          _view.Tissue14.linkProperty("Text",  function() { return "Tissue1="+" " +opt_geo+"("+V1+"m/s)"; } ); // HtmlView Page linking property 'Text' for element 'Tissue14'
           _view.Tissue14.linkProperty("Visibility",  function() { return arrowvisible; }, function(_v) { arrowvisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'Tissue14'
+          _view.Tissue23.linkProperty("Text",  function() { return "Tissue2="+" " +opt_geo2+"("+V2+"m/s)"; } ); // HtmlView Page linking property 'Text' for element 'Tissue23'
           _view.Tissue23.linkProperty("Visibility",  function() { return arrowvisible; }, function(_v) { arrowvisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'Tissue23'
           _view.CriticalAngel.linkProperty("Visibility",  function() { return criticalvis; }, function(_v) { criticalvis = _v; } ); // HtmlView Page linking property 'Visibility' for element 'CriticalAngel'
           _view.CriticalAngel2.linkProperty("Visibility",  function() { return criticalvis; }, function(_v) { criticalvis = _v; } ); // HtmlView Page linking property 'Visibility' for element 'CriticalAngel2'
@@ -1797,6 +1817,8 @@ var _stringProperties = {};
 }); // HtmlView Page setting action 'OnChange' for element 'angleSlider'
           _view.Angel2.linkProperty("Value",  function() { return angleDeg3; }, function(_v) { angleDeg3 = _v; } ); // HtmlView Page linking property 'Value' for element 'Angel2'
           _view.ımage.linkProperty("ImageUrl",  function() { return info; }, function(_v) { info = _v; } ); // HtmlView Page linking property 'ImageUrl' for element 'ımage'
+          _view.pePlottingPanel.linkProperty("Height",  function() { return PlotPanelHei; }, function(_v) { PlotPanelHei = _v; } ); // HtmlView Page linking property 'Height' for element 'pePlottingPanel'
+          _view.pePlottingPanel.linkProperty("Width",  function() { return PlotPanelWid; }, function(_v) { PlotPanelWid = _v; } ); // HtmlView Page linking property 'Width' for element 'pePlottingPanel'
           _view.pePlottingPanel.linkProperty("MinimumY",  function() { return Ymingraph; }, function(_v) { Ymingraph = _v; } ); // HtmlView Page linking property 'MinimumY' for element 'pePlottingPanel'
           _view.pePlottingPanel.linkProperty("TitleY",  function() { return GraphNameY; }, function(_v) { GraphNameY = _v; } ); // HtmlView Page linking property 'TitleY' for element 'pePlottingPanel'
           _view.pePlottingPanel.linkProperty("TitleX",  function() { return GraphNameX; }, function(_v) { GraphNameX = _v; } ); // HtmlView Page linking property 'TitleX' for element 'pePlottingPanel'
@@ -1819,7 +1841,6 @@ var _stringProperties = {};
           _view.Initial_pulse.linkProperty("Visibility",  function() { return intsep2; }, function(_v) { intsep2 = _v; } ); // HtmlView Page linking property 'Visibility' for element 'Initial_pulse'
           _view.First_Echo.linkProperty("Visibility",  function() { return intsep2; }, function(_v) { intsep2 = _v; } ); // HtmlView Page linking property 'Visibility' for element 'First_Echo'
           _view.Second_Echo.linkProperty("Visibility",  function() { return intsep2; }, function(_v) { intsep2 = _v; } ); // HtmlView Page linking property 'Visibility' for element 'Second_Echo'
-          _view.plotButton.linkProperty("Visibility",  function() { return tissuevisible2; }, function(_v) { tissuevisible2 = _v; } ); // HtmlView Page linking property 'Visibility' for element 'plotButton'
           _view.plotButton.setAction("OnClick", lib_Page_2); // HtmlView Page setting action 'OnClick' for element 'plotButton'
           _view.functionField.linkProperty("Value",  function() { return functionString; }, function(_v) { functionString = _v; } ); // HtmlView Page linking property 'Value' for element 'functionField'
           _view.functionField.setAction("OnChange", ınitPage); // HtmlView Page setting action 'OnChange' for element 'functionField'
@@ -2165,15 +2186,16 @@ function Ultrasound_View_0 (_topFrame) {
       ;
 
     _view._addElement(EJSS_DRAWING2D.text,"Tissue14", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'Tissue14'
-      .setProperty("X",-57) // EJsS HtmlView.HtmlView Page: setting property 'X' for element 'Tissue14'
+      .setProperty("MovesGroup",false) // EJsS HtmlView.HtmlView Page: setting property 'MovesGroup' for element 'Tissue14'
+      .setProperty("EnabledSize","ENABLED_NO_MOVE") // EJsS HtmlView.HtmlView Page: setting property 'EnabledSize' for element 'Tissue14'
+      .setProperty("X",-30) // EJsS HtmlView.HtmlView Page: setting property 'X' for element 'Tissue14'
       .setProperty("Y",7) // EJsS HtmlView.HtmlView Page: setting property 'Y' for element 'Tissue14'
-      .setProperty("Text","Tissue1") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'Tissue14'
+      .setProperty("EnabledPosition","ENABLED_NO_MOVE") // EJsS HtmlView.HtmlView Page: setting property 'EnabledPosition' for element 'Tissue14'
       ;
 
     _view._addElement(EJSS_DRAWING2D.text,"Tissue23", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'Tissue23'
-      .setProperty("X",-57) // EJsS HtmlView.HtmlView Page: setting property 'X' for element 'Tissue23'
+      .setProperty("X",-30) // EJsS HtmlView.HtmlView Page: setting property 'X' for element 'Tissue23'
       .setProperty("Y",-7) // EJsS HtmlView.HtmlView Page: setting property 'Y' for element 'Tissue23'
-      .setProperty("Text","Tissue2") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'Tissue23'
       ;
 
     _view._addElement(EJSS_DRAWING2D.text,"CriticalAngel", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'CriticalAngel'
@@ -2230,7 +2252,7 @@ function Ultrasound_View_0 (_topFrame) {
       ;
 
     _view._addElement(EJSS_INTERFACE.imageAndTextButton,"Attenuation", _view.panelAtte) // EJsS HtmlView.HtmlView Page: declaration of element 'Attenuation'
-      .setProperty("Text","Attenuation") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'Attenuation'
+      .setProperty("Text","Attenuation(dB/MHz*cm)") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'Attenuation'
       ;
 
     _view._addElement(EJSS_INTERFACE.slider,"Coef", _view.panelAtte) // EJsS HtmlView.HtmlView Page: declaration of element 'Coef'
@@ -2340,13 +2362,17 @@ function Ultrasound_View_0 (_topFrame) {
       ;
 
     _view._addElement(EJSS_INTERFACE.panel,"panel2", _view.Drawing_panel) // EJsS HtmlView.HtmlView Page: declaration of element 'panel2'
+      .setProperty("Background","White") // EJsS HtmlView.HtmlView Page: setting property 'Background' for element 'panel2'
+      .setProperty("Foreground","White") // EJsS HtmlView.HtmlView Page: setting property 'Foreground' for element 'panel2'
       ;
 
     _view._addElement(EJSS_DRAWING2D.drawingPanel,"drawingPanel2", _view.panel2) // EJsS HtmlView.HtmlView Page: declaration of element 'drawingPanel2'
-      .setProperty("Height",150) // EJsS HtmlView.HtmlView Page: setting property 'Height' for element 'drawingPanel2'
+      .setProperty("Height",800) // EJsS HtmlView.HtmlView Page: setting property 'Height' for element 'drawingPanel2'
       .setProperty("Width",600) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'drawingPanel2'
       .setProperty("MinimumX",0) // EJsS HtmlView.HtmlView Page: setting property 'MinimumX' for element 'drawingPanel2'
       .setProperty("MinimumY",0) // EJsS HtmlView.HtmlView Page: setting property 'MinimumY' for element 'drawingPanel2'
+      .setProperty("AutoScaleY",false) // EJsS HtmlView.HtmlView Page: setting property 'AutoScaleY' for element 'drawingPanel2'
+      .setProperty("AutoScaleX",false) // EJsS HtmlView.HtmlView Page: setting property 'AutoScaleX' for element 'drawingPanel2'
       .setProperty("MaximumY",100) // EJsS HtmlView.HtmlView Page: setting property 'MaximumY' for element 'drawingPanel2'
       .setProperty("MaximumX",100) // EJsS HtmlView.HtmlView Page: setting property 'MaximumX' for element 'drawingPanel2'
       ;
@@ -2367,8 +2393,6 @@ function Ultrasound_View_0 (_topFrame) {
       ;
 
     _view._addElement(EJSS_DRAWING2D.plottingPanel,"pePlottingPanel", _view.peTopPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'pePlottingPanel'
-      .setProperty("Height",400) // EJsS HtmlView.HtmlView Page: setting property 'Height' for element 'pePlottingPanel'
-      .setProperty("Width",500) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'pePlottingPanel'
       .setProperty("MinimumX",0) // EJsS HtmlView.HtmlView Page: setting property 'MinimumX' for element 'pePlottingPanel'
       .setProperty("AutoScaleY",false) // EJsS HtmlView.HtmlView Page: setting property 'AutoScaleY' for element 'pePlottingPanel'
       .setProperty("AutoScaleX",false) // EJsS HtmlView.HtmlView Page: setting property 'AutoScaleX' for element 'pePlottingPanel'
@@ -2444,6 +2468,7 @@ function Ultrasound_View_0 (_topFrame) {
     _view._addElement(EJSS_INTERFACE.button,"plotButton", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'plotButton'
       .setProperty("Tooltip","Initialize") // EJsS HtmlView.HtmlView Page: setting property 'Tooltip' for element 'plotButton'
       .setProperty("Text","Plot") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'plotButton'
+      .setProperty("Visibility",false) // EJsS HtmlView.HtmlView Page: setting property 'Visibility' for element 'plotButton'
       ;
 
     _view._addElement(EJSS_INTERFACE.imageAndTextButton,"fxLabel", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'fxLabel'
