@@ -1844,12 +1844,10 @@ var _stringProperties = {};
           _view.plotButton.setAction("OnClick", lib_Page_2); // HtmlView Page setting action 'OnClick' for element 'plotButton'
           _view.functionField.linkProperty("Value",  function() { return functionString; }, function(_v) { functionString = _v; } ); // HtmlView Page linking property 'Value' for element 'functionField'
           _view.functionField.setAction("OnChange", ınitPage); // HtmlView Page setting action 'OnChange' for element 'functionField'
-          _view.nField.linkProperty("Value",  function() { return n; }, function(_v) { n = _v; } ); // HtmlView Page linking property 'Value' for element 'nField'
-          _view.nField.setAction("OnChange", ınitPage); // HtmlView Page setting action 'OnChange' for element 'nField'
           _view.xmaxLabel.linkProperty("Visibility",  function() { return tissuevisible2; }, function(_v) { tissuevisible2 = _v; } ); // HtmlView Page linking property 'Visibility' for element 'xmaxLabel'
-          _view.xmaxField.linkProperty("Value",  function() { return xmax; }, function(_v) { xmax = _v; } ); // HtmlView Page linking property 'Value' for element 'xmaxField'
-          _view.xmaxField.setAction("OnChange", lib_Page_2); // HtmlView Page setting action 'OnChange' for element 'xmaxField'
-          _view.xmaxField.linkProperty("Visibility",  function() { return tissuevisible2; }, function(_v) { tissuevisible2 = _v; } ); // HtmlView Page linking property 'Visibility' for element 'xmaxField'
+          _view.cmslider.linkProperty("Value",  function() { return xmax; }, function(_v) { xmax = _v; } ); // HtmlView Page linking property 'Value' for element 'cmslider'
+          _view.cmslider.setAction("OnChange", lib_Page_2); // HtmlView Page setting action 'OnChange' for element 'cmslider'
+          _view.cmslider.linkProperty("Visibility",  function() { return tissuevisible2; }, function(_v) { tissuevisible2 = _v; } ); // HtmlView Page linking property 'Visibility' for element 'cmslider'
           _view.AttenuationI.linkProperty("Visibility",  function() { return intsep; }, function(_v) { intsep = _v; } ); // HtmlView Page linking property 'Visibility' for element 'AttenuationI'
           _view.Atte.linkProperty("Value",  function() { return AttenuationI; }, function(_v) { AttenuationI = _v; } ); // HtmlView Page linking property 'Value' for element 'Atte'
           _view.Atte.linkProperty("Visibility",  function() { return intsep; }, function(_v) { intsep = _v; } ); // HtmlView Page linking property 'Visibility' for element 'Atte'
@@ -1859,6 +1857,10 @@ var _stringProperties = {};
           _view.Transmitted.linkProperty("Visibility",  function() { return intsep; }, function(_v) { intsep = _v; } ); // HtmlView Page linking property 'Visibility' for element 'Transmitted'
           _view.It.linkProperty("Value",  function() { return It; }, function(_v) { It = _v; } ); // HtmlView Page linking property 'Value' for element 'It'
           _view.It.linkProperty("Visibility",  function() { return intsep; }, function(_v) { intsep = _v; } ); // HtmlView Page linking property 'Visibility' for element 'It'
+          _view.xmaxField.linkProperty("Value",  function() { return xmax; }, function(_v) { xmax = _v; } ); // HtmlView Page linking property 'Value' for element 'xmaxField'
+          _view.xmaxField.setAction("OnChange", lib_Page_2); // HtmlView Page setting action 'OnChange' for element 'xmaxField'
+          _view.nField.linkProperty("Value",  function() { return n; }, function(_v) { n = _v; } ); // HtmlView Page linking property 'Value' for element 'nField'
+          _view.nField.setAction("OnChange", ınitPage); // HtmlView Page setting action 'OnChange' for element 'nField'
           _view.FirstEcho.linkProperty("Value",  function() { return FirstEchoI; }, function(_v) { FirstEchoI = _v; } ); // HtmlView Page linking property 'Value' for element 'FirstEcho'
           _view.SecondEcho1.linkProperty("Value",  function() { return SecondEcho1; }, function(_v) { SecondEcho1 = _v; } ); // HtmlView Page linking property 'Value' for element 'SecondEcho1'
           _view.SecondEcho2.linkProperty("Value",  function() { return SecondEcho2; }, function(_v) { SecondEcho2 = _v; } ); // HtmlView Page linking property 'Value' for element 'SecondEcho2'
@@ -2373,6 +2375,7 @@ function Ultrasound_View_0 (_topFrame) {
       .setProperty("MinimumY",0) // EJsS HtmlView.HtmlView Page: setting property 'MinimumY' for element 'drawingPanel2'
       .setProperty("AutoScaleY",false) // EJsS HtmlView.HtmlView Page: setting property 'AutoScaleY' for element 'drawingPanel2'
       .setProperty("AutoScaleX",false) // EJsS HtmlView.HtmlView Page: setting property 'AutoScaleX' for element 'drawingPanel2'
+      .setProperty("LineWidth",0.5) // EJsS HtmlView.HtmlView Page: setting property 'LineWidth' for element 'drawingPanel2'
       .setProperty("MaximumY",100) // EJsS HtmlView.HtmlView Page: setting property 'MaximumY' for element 'drawingPanel2'
       .setProperty("MaximumX",100) // EJsS HtmlView.HtmlView Page: setting property 'MaximumX' for element 'drawingPanel2'
       ;
@@ -2482,19 +2485,17 @@ function Ultrasound_View_0 (_topFrame) {
       .setProperty("Visibility",false) // EJsS HtmlView.HtmlView Page: setting property 'Visibility' for element 'functionField'
       ;
 
-    _view._addElement(EJSS_INTERFACE.numberField,"nField", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'nField'
-      .setProperty("Width","50px") // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'nField'
-      .setProperty("Format","0") // EJsS HtmlView.HtmlView Page: setting property 'Format' for element 'nField'
-      .setProperty("Visibility",false) // EJsS HtmlView.HtmlView Page: setting property 'Visibility' for element 'nField'
-      ;
-
     _view._addElement(EJSS_INTERFACE.imageAndTextButton,"xmaxLabel", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'xmaxLabel'
       .setProperty("Text","cm = ") // EJsS HtmlView.HtmlView Page: setting property 'Text' for element 'xmaxLabel'
       ;
 
-    _view._addElement(EJSS_INTERFACE.numberField,"xmaxField", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'xmaxField'
-      .setProperty("Width",50) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'xmaxField'
-      .setProperty("Format","0.000") // EJsS HtmlView.HtmlView Page: setting property 'Format' for element 'xmaxField'
+    _view._addElement(EJSS_INTERFACE.slider,"cmslider", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'cmslider'
+      .setProperty("Width",100) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'cmslider'
+      .setProperty("Minimum",1) // EJsS HtmlView.HtmlView Page: setting property 'Minimum' for element 'cmslider'
+      .setProperty("Maximum",20) // EJsS HtmlView.HtmlView Page: setting property 'Maximum' for element 'cmslider'
+      .setProperty("ShowText",true) // EJsS HtmlView.HtmlView Page: setting property 'ShowText' for element 'cmslider'
+      .setProperty("Format","0") // EJsS HtmlView.HtmlView Page: setting property 'Format' for element 'cmslider'
+      .setProperty("Step",1) // EJsS HtmlView.HtmlView Page: setting property 'Step' for element 'cmslider'
       ;
 
     _view._addElement(EJSS_INTERFACE.imageAndTextButton,"AttenuationI", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'AttenuationI'
@@ -2528,6 +2529,18 @@ function Ultrasound_View_0 (_topFrame) {
       .setProperty("Format","0.0") // EJsS HtmlView.HtmlView Page: setting property 'Format' for element 'It'
       .setProperty("Editable",false) // EJsS HtmlView.HtmlView Page: setting property 'Editable' for element 'It'
       .setProperty("Foreground","Blue") // EJsS HtmlView.HtmlView Page: setting property 'Foreground' for element 'It'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.numberField,"xmaxField", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'xmaxField'
+      .setProperty("Width",50) // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'xmaxField'
+      .setProperty("Format","0.0") // EJsS HtmlView.HtmlView Page: setting property 'Format' for element 'xmaxField'
+      .setProperty("Visibility",false) // EJsS HtmlView.HtmlView Page: setting property 'Visibility' for element 'xmaxField'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.numberField,"nField", _view.peControlPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'nField'
+      .setProperty("Width","50px") // EJsS HtmlView.HtmlView Page: setting property 'Width' for element 'nField'
+      .setProperty("Format","0") // EJsS HtmlView.HtmlView Page: setting property 'Format' for element 'nField'
+      .setProperty("Visibility",false) // EJsS HtmlView.HtmlView Page: setting property 'Visibility' for element 'nField'
       ;
 
     _view._addElement(EJSS_INTERFACE.panel,"IntensityValues", _view.pePanel) // EJsS HtmlView.HtmlView Page: declaration of element 'IntensityValues'
