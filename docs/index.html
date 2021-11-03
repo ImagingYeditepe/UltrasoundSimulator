@@ -658,7 +658,7 @@ var _stringProperties = {};
   });
 
   _model.addToReset(function() {
-    options = ["Attenuation","Geometry of Reflection and Transmission","Intensity"]; // EjsS Model.Variables.Var Table.options
+    options = ["Attenuation","Geometry of Reflection and Transmission","Intensity of Reflection and Transmission"]; // EjsS Model.Variables.Var Table.options
     opt_angle = new Array(1); // EjsS Model.Variables.Var Table.opt_angle
     (function () {
       var _i0;
@@ -1615,6 +1615,12 @@ var _stringProperties = {};
           _view.ımage22.linkProperty("X",  function() { return 105-CM; } ); // HtmlView Page linking property 'X' for element 'ımage22'
           _view.ımage22.linkProperty("ImageUrl",  function() { return ImageUrl; }, function(_v) { ImageUrl = _v; } ); // HtmlView Page linking property 'ImageUrl' for element 'ımage22'
           _view.ımage22.linkProperty("Visibility",  function() { return transdurcervisible; }, function(_v) { transdurcervisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'ımage22'
+          _view.text1.linkProperty("X",  function() { return 105-CM; } ); // HtmlView Page linking property 'X' for element 'text1'
+          _view.text1.linkProperty("Visibility",  function() { return Iarrowvisible; }, function(_v) { Iarrowvisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'text1'
+          _view.text1.linkProperty("Text",  function() { return opt_TissueZ1+""; } ); // HtmlView Page linking property 'Text' for element 'text1'
+          _view.text2.linkProperty("X",  function() { return 105-CM; } ); // HtmlView Page linking property 'X' for element 'text2'
+          _view.text2.linkProperty("Text",  function() { return "Z="+" "+Z1+"Mrayl"; } ); // HtmlView Page linking property 'Text' for element 'text2'
+          _view.text2.linkProperty("Visibility",  function() { return Iarrowvisible; }, function(_v) { Iarrowvisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'text2'
           _view.shape1.linkProperty("X",  function() { return 105-CM; } ); // HtmlView Page linking property 'X' for element 'shape1'
           _view.shape1.linkProperty("Visibility",  function() { return Choosevis; }, function(_v) { Choosevis = _v; } ); // HtmlView Page linking property 'Visibility' for element 'shape1'
           _view.Tissue1Segment2.linkProperty("X",  function() { return 50-CM; } ); // HtmlView Page linking property 'X' for element 'Tissue1Segment2'
@@ -1629,6 +1635,12 @@ var _stringProperties = {};
           _view.ımage4.linkProperty("X",  function() { return 215-CM; } ); // HtmlView Page linking property 'X' for element 'ımage4'
           _view.ımage4.linkProperty("ImageUrl",  function() { return ImageUrl2; }, function(_v) { ImageUrl2 = _v; } ); // HtmlView Page linking property 'ImageUrl' for element 'ımage4'
           _view.ımage4.linkProperty("Visibility",  function() { return Iarrowvisible; }, function(_v) { Iarrowvisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'ımage4'
+          _view.textint.linkProperty("X",  function() { return 215-CM; } ); // HtmlView Page linking property 'X' for element 'textint'
+          _view.textint.linkProperty("Text",  function() { return opt_TissueZ2+""; } ); // HtmlView Page linking property 'Text' for element 'textint'
+          _view.textint.linkProperty("Visibility",  function() { return Iarrowvisible; }, function(_v) { Iarrowvisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'textint'
+          _view.textint2.linkProperty("X",  function() { return 215-CM; } ); // HtmlView Page linking property 'X' for element 'textint2'
+          _view.textint2.linkProperty("Text",  function() { return "Z="+" "+Z2+"Mrayl"; } ); // HtmlView Page linking property 'Text' for element 'textint2'
+          _view.textint2.linkProperty("Visibility",  function() { return Iarrowvisible; }, function(_v) { Iarrowvisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'textint2'
           _view.shape12.linkProperty("X",  function() { return 215-CM; } ); // HtmlView Page linking property 'X' for element 'shape12'
           _view.shape12.linkProperty("Visibility",  function() { return Choosevis2; }, function(_v) { Choosevis2 = _v; } ); // HtmlView Page linking property 'Visibility' for element 'shape12'
           _view.GEO1.linkProperty("Visibility",  function() { return arrowvisible; }, function(_v) { arrowvisible = _v; } ); // HtmlView Page linking property 'Visibility' for element 'GEO1'
@@ -1980,6 +1992,14 @@ function Ultrasound_View_0 (_topFrame) {
       .setProperty("SizeY",200) // EJsS HtmlView.HtmlView Page: setting property 'SizeY' for element 'ımage22'
       ;
 
+    _view._addElement(EJSS_DRAWING2D.text,"text1", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'text1'
+      .setProperty("Y",-70) // EJsS HtmlView.HtmlView Page: setting property 'Y' for element 'text1'
+      ;
+
+    _view._addElement(EJSS_DRAWING2D.text,"text2", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'text2'
+      .setProperty("Y",-90) // EJsS HtmlView.HtmlView Page: setting property 'Y' for element 'text2'
+      ;
+
     _view._addElement(EJSS_DRAWING2D.shape,"shape1", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'shape1'
       .setProperty("FillColor","DarkGray") // EJsS HtmlView.HtmlView Page: setting property 'FillColor' for element 'shape1'
       .setProperty("SizeX",110) // EJsS HtmlView.HtmlView Page: setting property 'SizeX' for element 'shape1'
@@ -2030,6 +2050,14 @@ function Ultrasound_View_0 (_topFrame) {
       .setProperty("SizeX",110) // EJsS HtmlView.HtmlView Page: setting property 'SizeX' for element 'ımage4'
       .setProperty("Y",0) // EJsS HtmlView.HtmlView Page: setting property 'Y' for element 'ımage4'
       .setProperty("SizeY",200) // EJsS HtmlView.HtmlView Page: setting property 'SizeY' for element 'ımage4'
+      ;
+
+    _view._addElement(EJSS_DRAWING2D.text,"textint", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'textint'
+      .setProperty("Y",-70) // EJsS HtmlView.HtmlView Page: setting property 'Y' for element 'textint'
+      ;
+
+    _view._addElement(EJSS_DRAWING2D.text,"textint2", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'textint2'
+      .setProperty("Y",-90) // EJsS HtmlView.HtmlView Page: setting property 'Y' for element 'textint2'
       ;
 
     _view._addElement(EJSS_DRAWING2D.shape,"shape12", _view.drawingPanel) // EJsS HtmlView.HtmlView Page: declaration of element 'shape12'
